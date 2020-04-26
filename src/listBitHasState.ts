@@ -8,19 +8,21 @@ export const listBitHasState = function* (
 ): Generator<number> {
     const skip = state ? 0x00 : 0xFF;
     const view = new DataView(buffer);
-    let bitOffset = start;
-    while (bitOffset < end) {
-        const byte = view.getUint8(bitOffset >>> 3);
-        const next = Math.min(bitOffset + 8 - (bitOffset % 8), end);
-        if (byte === skip) {
-            bitOffset = next;
-        } else {
-            while (bitOffset < next) {
-                if (getBitInByte(byte, bitOffset) === state) {
-                    yield bitOffset;
+    const endByte = Math.ceil(end / 8);
+    let byteOffset = Math.floor(start / 8);
+    let bitIndex = start % 8;
+    while (byteOffset < endByte) {
+        const byte = view.getUint8(byteOffset);
+        if (byte !== skip) {
+            const bitOffset = byteOffset * 8;
+            while (bitIndex < Math.min(8, end - bitOffset)) {
+                if (getBitInByte(byte, bitIndex) === state) {
+                    yield bitOffset + bitIndex;
                 }
-                bitOffset++;
+                bitIndex++;
             }
         }
+        bitIndex = 0;
+        byteOffset++;
     }
 };
