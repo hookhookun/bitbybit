@@ -1,4 +1,4 @@
 export const getBitInByte = (
     byte: number,
-    offset: number,
-): boolean => Boolean((byte >>> (7 - (offset % 8))) % 2);
+    bitIndex: number,
+): boolean => Boolean((byte >>> (7 - (bitIndex % 8))) % 2);

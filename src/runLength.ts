@@ -2,19 +2,19 @@ import {listBitHasState} from './listBitHasState';
 
 export const runLength = function* (
     buffer: ArrayBuffer,
-    start = 0,
-    end = buffer.byteLength * 8,
+    startBit = 0,
+    endBit = buffer.byteLength * 8,
     startState = false,
 ): Generator<number> {
-    let bitOffset = start;
+    let bitOffset = startBit;
     let state = startState;
     while (1) {
         state = !state;
-        const result = listBitHasState(buffer, state, bitOffset, end).next();
+        const result = listBitHasState(buffer, state, bitOffset, endBit).next();
         if (result.done) {
-            const lastLength = end - bitOffset;
+            const lastLength = endBit - bitOffset;
             if (0 < lastLength) {
-                yield end - bitOffset;
+                yield endBit - bitOffset;
             }
             break;
         }
