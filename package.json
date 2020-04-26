@@ -27,7 +27,7 @@
         "test": "run-s test:*",
         "test:lint": "eslint --ext .ts src",
         "test:module": "ava",
-        "gendoc": "typedoc"
+        "gendoc": "typedoc --theme minimal"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.26.0",
