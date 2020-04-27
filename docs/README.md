@@ -21,7 +21,7 @@
 
 ▸ **createBufferFromBitLength**(`bitLength`: number): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/728e01e/src/createBuffer.ts#L6)*
+*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/6289d7e/src/createBuffer.ts#L6)*
 
 If bitLength is 6, then this returns ArrayBuffer of 1 byte.
 If bitLength is 9, then this returns ArrayBuffer of 2 bytes.
@@ -40,7 +40,7 @@ ___
 
 ▸ **createBufferFromBytes**(`byteLength`: Iterable‹number›): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/728e01e/src/createBuffer.ts#L8)*
+*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/6289d7e/src/createBuffer.ts#L8)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **getBit**(`buffer`: ArrayBuffer, `bitOffset`: number): *boolean*
 
-*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/728e01e/src/getBit.ts#L3)*
+*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/6289d7e/src/getBit.ts#L3)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **getBitInByte**(`byte`: number, `bitIndex`: number): *boolean*
 
-*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/728e01e/src/getBitInByte.ts#L1)*
+*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/6289d7e/src/getBitInByte.ts#L1)*
 
 **Parameters:**
 
@@ -90,7 +90,7 @@ ___
 
 ▸ **listBit**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number): *Generator‹boolean›*
 
-*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/728e01e/src/listBit.ts#L3)*
+*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/6289d7e/src/listBit.ts#L3)*
 
 **Parameters:**
 
@@ -108,7 +108,7 @@ ___
 
 ▸ **listBitHasState**(`buffer`: ArrayBuffer, `state`: boolean, `startBit`: number, `endBit`: number): *Generator‹number›*
 
-*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/728e01e/src/listBitHasState.ts#L3)*
+*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/6289d7e/src/listBitHasState.ts#L3)*
 
 **Parameters:**
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **runLength**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number, `startState`: boolean): *Generator‹number›*
 
-*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/728e01e/src/runLength.ts#L3)*
+*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/6289d7e/src/runLength.ts#L3)*
 
 **Parameters:**
 
@@ -146,7 +146,7 @@ ___
 
 ▸ **setBit**(`buffer`: ArrayBuffer, `bitOffset`: number, `bitState`: boolean): *void*
 
-*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/728e01e/src/setBit.ts#L3)*
+*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/6289d7e/src/setBit.ts#L3)*
 
 **Parameters:**
 
@@ -164,7 +164,7 @@ ___
 
 ▸ **setBitInByte**(`byte`: number, `bitIndex`: number, `bitState`: boolean): *number*
 
-*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/728e01e/src/setBitInByte.ts#L1)*
+*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/6289d7e/src/setBitInByte.ts#L1)*
 
 **Parameters:**
 
