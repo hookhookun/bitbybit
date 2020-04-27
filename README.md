@@ -10,7 +10,7 @@ npm install @hookun/bitbybit
 
 ## Document
 
-https://hookun.github.io/bitbybit/index.html
+[docs/README.md](docs/README.md)
 
 ## License
 

@@ -1,0 +1,6 @@
+{
+    "inputFiles": ["./src"],
+    "mode": "file",
+    "readme": "none",
+    "stripInternal": true
+}
