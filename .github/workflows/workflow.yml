@@ -29,7 +29,6 @@ jobs:
       - uses: actions/setup-node@v1
         with: {node-version: 12.x}
       - run: npm test
-      - run: git diff --exit-code
   Build:
     needs: [Test]
     runs-on: ubuntu-latest

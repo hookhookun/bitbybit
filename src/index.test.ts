@@ -9,10 +9,7 @@ ava('generate index.ts', async (t) => {
             names.push(name.slice(0, name.indexOf('.')));
         }
     }
-    const dest = path.join(__dirname, 'index.ts');
-    const code = names
-    .map((name) => `export * from './${name}';`)
-    .join('\n');
-    await fs.promises.writeFile(dest, code);
-    t.pass();
+    const expected = names.map((name) => `export * from './${name}';`).concat('').join('\n');
+    const actual = await fs.promises.readFile(path.join(__dirname, 'index.ts'), 'utf8');
+    t.is(actual, expected);
 });
