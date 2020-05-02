@@ -1,7 +1,16 @@
+[@hookun/bitbybit](README.md)
 
 # @hookun/bitbybit
 
 ## Index
+
+### Classes
+
+* [BitWriter](classes/bitwriter.md)
+
+### Variables
+
+* [WordSize](README.md#const-wordsize)
 
 ### Functions
 
@@ -14,6 +23,15 @@
 * [runLength](README.md#const-runlength)
 * [setBit](README.md#const-setbit)
 * [setBitInByte](README.md#const-setbitinbyte)
+* [toString](README.md#const-tostring)
+
+## Variables
+
+### `Const` WordSize
+
+• **WordSize**: *8* = 8
+
+*Defined in [BitWriter.ts:1](https://github.com/hookun/bitbybit/blob/c76be99/src/BitWriter.ts#L1)*
 
 ## Functions
 
@@ -21,7 +39,7 @@
 
 ▸ **createBufferFromBitLength**(`bitLength`: number): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/e667185/src/createBuffer.ts#L6)*
+*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/c76be99/src/createBuffer.ts#L6)*
 
 If bitLength is 6, then this returns ArrayBuffer of 1 byte.
 If bitLength is 9, then this returns ArrayBuffer of 2 bytes.
@@ -40,7 +58,7 @@ ___
 
 ▸ **createBufferFromBytes**(`byteLength`: Iterable‹number›): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/e667185/src/createBuffer.ts#L8)*
+*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/c76be99/src/createBuffer.ts#L8)*
 
 **Parameters:**
 
@@ -56,7 +74,7 @@ ___
 
 ▸ **getBit**(`buffer`: ArrayBuffer, `bitOffset`: number): *boolean*
 
-*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/e667185/src/getBit.ts#L3)*
+*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/c76be99/src/getBit.ts#L3)*
 
 **Parameters:**
 
@@ -73,7 +91,7 @@ ___
 
 ▸ **getBitInByte**(`byte`: number, `bitIndex`: number): *boolean*
 
-*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/e667185/src/getBitInByte.ts#L1)*
+*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/c76be99/src/getBitInByte.ts#L1)*
 
 **Parameters:**
 
@@ -90,7 +108,7 @@ ___
 
 ▸ **listBit**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number): *Generator‹boolean›*
 
-*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/e667185/src/listBit.ts#L3)*
+*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/c76be99/src/listBit.ts#L3)*
 
 **Parameters:**
 
@@ -108,7 +126,7 @@ ___
 
 ▸ **listBitHasState**(`buffer`: ArrayBuffer, `state`: boolean, `startBit`: number, `endBit`: number): *Generator‹number›*
 
-*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/e667185/src/listBitHasState.ts#L3)*
+*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/c76be99/src/listBitHasState.ts#L3)*
 
 **Parameters:**
 
@@ -127,7 +145,7 @@ ___
 
 ▸ **runLength**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number, `startState`: boolean): *Generator‹number›*
 
-*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/e667185/src/runLength.ts#L3)*
+*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/c76be99/src/runLength.ts#L3)*
 
 **Parameters:**
 
@@ -146,7 +164,7 @@ ___
 
 ▸ **setBit**(`buffer`: ArrayBuffer, `bitOffset`: number, `bitState`: boolean): *void*
 
-*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/e667185/src/setBit.ts#L3)*
+*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/c76be99/src/setBit.ts#L3)*
 
 **Parameters:**
 
@@ -164,7 +182,7 @@ ___
 
 ▸ **setBitInByte**(`byte`: number, `bitIndex`: number, `bitState`: boolean): *number*
 
-*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/e667185/src/setBitInByte.ts#L1)*
+*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/c76be99/src/setBitInByte.ts#L1)*
 
 **Parameters:**
 
@@ -175,3 +193,21 @@ Name | Type |
 `bitState` | boolean |
 
 **Returns:** *number*
+
+___
+
+### `Const` toString
+
+▸ **toString**(`buffer`: ArrayBuffer, `bytesPerLine`: number, `delimiter`: string): *string*
+
+*Defined in [toString.ts:1](https://github.com/hookun/bitbybit/blob/c76be99/src/toString.ts#L1)*
+
+**Parameters:**
+
+Name | Type | Default |
+------ | ------ | ------ |
+`buffer` | ArrayBuffer | - |
+`bytesPerLine` | number | 4 |
+`delimiter` | string | " " |
+
+**Returns:** *string*
