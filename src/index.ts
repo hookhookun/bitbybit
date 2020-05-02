@@ -1,3 +1,4 @@
+export * from './BitWriter';
 export * from './createBuffer';
 export * from './getBit';
 export * from './getBitInByte';
@@ -6,3 +7,4 @@ export * from './listBitHasState';
 export * from './runLength';
 export * from './setBit';
 export * from './setBitInByte';
+export * from './toString';
