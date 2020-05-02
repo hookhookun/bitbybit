@@ -41,7 +41,9 @@ export class BitWriter {
     }
 
     public end(): ArrayBuffer {
-        this.view.setUint8(this.byteOffset, this.byte);
+        if (0 < this.bitOffset) {
+            this.view.setUint8(this.byteOffset, this.byte);
+        }
         return this.buffer;
     }
 

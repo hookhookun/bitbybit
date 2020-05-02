@@ -49,3 +49,13 @@ ava('Write big values', (t) => {
         '0000',
     ].join(''));
 });
+
+ava('Test boundary', (t) => {
+    const buffer = createBufferFromBitLength(8);
+    const writer = new BitWriter(buffer);
+    writer.write(0b111, 4);
+    writer.write(0b111, 4);
+    const actual = writer.end();
+    t.is(actual, buffer);
+    t.is(toString(buffer, 0, ''), '01110111');
+});
