@@ -9,7 +9,7 @@ ava('Write a value', (t) => {
     writer.write(0b111, 10);
     const actual = writer.end();
     t.is(actual, buffer);
-    t.is(toString(buffer, 0, ''), [
+    t.is(toString(buffer, 0), [
         '0000000111000000',
     ].join('\n'));
 });
@@ -23,7 +23,7 @@ ava('Write values', (t) => {
     writer.write(0b111, 5);
     const actual = writer.end();
     t.is(actual, buffer);
-    t.is(toString(buffer, 0, ''), [
+    t.is(toString(buffer, 0), [
         '00111',
         '00111',
         '00111',
@@ -41,7 +41,7 @@ ava('Write big values', (t) => {
     writer.write(0b111, 11);
     const actual = writer.end();
     t.is(actual, buffer);
-    t.is(toString(buffer, 0, ''), [
+    t.is(toString(buffer, 0), [
         '00000000111',
         '00000000111',
         '00000000111',
@@ -57,5 +57,5 @@ ava('Test boundary', (t) => {
     writer.write(0b111, 4);
     const actual = writer.end();
     t.is(actual, buffer);
-    t.is(toString(buffer, 0, ''), '01110111');
+    t.is(toString(buffer, 0), '01110111');
 });
