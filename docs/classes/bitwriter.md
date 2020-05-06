@@ -34,7 +34,7 @@
 
 \+ **new BitWriter**(`buffer`: ArrayBuffer): *[BitWriter](bitwriter.md)*
 
-*Defined in [BitWriter.ts:11](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L11)*
+*Defined in [BitWriter.ts:11](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L11)*
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ Name | Type |
 
 • **bitOffset**: *number*
 
-*Defined in [BitWriter.ts:9](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L9)*
+*Defined in [BitWriter.ts:9](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L9)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **byte**: *number*
 
-*Defined in [BitWriter.ts:11](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L11)*
+*Defined in [BitWriter.ts:11](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L11)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **byteOffset**: *number*
 
-*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L7)*
+*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L7)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **view**: *DataView*
 
-*Defined in [BitWriter.ts:5](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L5)*
+*Defined in [BitWriter.ts:5](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L5)*
 
 ## Accessors
 
@@ -82,7 +82,7 @@ ___
 
 • **get buffer**(): *ArrayBuffer*
 
-*Defined in [BitWriter.ts:20](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L20)*
+*Defined in [BitWriter.ts:20](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L20)*
 
 **Returns:** *ArrayBuffer*
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **end**(): *ArrayBuffer*
 
-*Defined in [BitWriter.ts:43](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L43)*
+*Defined in [BitWriter.ts:43](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L43)*
 
 **Returns:** *ArrayBuffer*
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **write**(`value`: number, `bitLength`: number): *void*
 
-*Defined in [BitWriter.ts:24](https://github.com/hookun/bitbybit/blob/fe1cd27/src/BitWriter.ts#L24)*
+*Defined in [BitWriter.ts:24](https://github.com/hookun/bitbybit/blob/3c6493c/src/BitWriter.ts#L24)*
 
 **Parameters:**
 
