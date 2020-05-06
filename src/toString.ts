@@ -1,17 +1,19 @@
 export const toString = (
     buffer: ArrayBuffer,
-    bytesPerLine = 4,
-    delimiter = ' ',
+    bitsPerLine = 32,
+    delimiter = '',
 ): string => {
     const lines: Array<string> = [];
     let line: Array<string> = [];
     const {byteLength} = buffer;
     const view = new DataView(buffer);
     for (let byteOffset = 0; byteOffset < byteLength; byteOffset++) {
-        const length = line.push(view.getUint8(byteOffset).toString(2).padStart(8, '0'));
-        if (length === bytesPerLine) {
-            lines.push(line.join(delimiter));
-            line = [];
+        for (const bit of view.getUint8(byteOffset).toString(2).padStart(8, '0')) {
+            const length = line.push(bit);
+            if (length === bitsPerLine) {
+                lines.push(line.join(delimiter));
+                line = [];
+            }
         }
     }
     if (0 < line.length) {
