@@ -5,10 +5,11 @@ const test = (
     values: Array<number>,
     expected: Array<string>,
     bitsPerLine?: number,
+    maxLineCount?: number,
 ): void => {
     const hex = values.map((x) => x.toString(16).padStart(2, '0')).join('-');
-    ava(`${hex} ${bitsPerLine || 4}`, (t) => {
-        t.is(toString(new Uint8Array(values).buffer, bitsPerLine), expected.join('\n'));
+    ava(`${hex} ${bitsPerLine || 4} ${bitsPerLine} ${maxLineCount}`, (t) => {
+        t.is(toString(new Uint8Array(values).buffer, bitsPerLine, maxLineCount), expected.join('\n'));
     });
 };
 
@@ -27,3 +28,9 @@ test([0, 1, 2, 3, 4, 5, 6, 7], [
     '00000110',
     '00000111',
 ], 8);
+
+test([0, 1, 2, 3, 4, 5, 6, 7], [
+    '00000000',
+    '00000001',
+    '00000010',
+], 8, 3);

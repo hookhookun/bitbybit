@@ -1,6 +1,7 @@
 export const toString = (
     buffer: ArrayBuffer,
     bitsPerLine = 32,
+    maxLineCount = Infinity,
     delimiter = '',
 ): string => {
     const lines: Array<string> = [];
@@ -11,7 +12,10 @@ export const toString = (
         for (const bit of view.getUint8(byteOffset).toString(2).padStart(8, '0')) {
             const length = line.push(bit);
             if (length === bitsPerLine) {
-                lines.push(line.join(delimiter));
+                const lineCount = lines.push(line.join(delimiter));
+                if (maxLineCount <= lineCount) {
+                    return lines.join('\n');
+                }
                 line = [];
             }
         }
