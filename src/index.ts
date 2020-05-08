@@ -1,5 +1,6 @@
 export * from './BitReader';
 export * from './BitWriter';
+export * from './Wrapper';
 export * from './constants';
 export * from './createBuffer';
 export * from './createBufferFromString';
@@ -12,4 +13,3 @@ export * from './runLength';
 export * from './setBit';
 export * from './setBitInByte';
 export * from './toString';
-export * from './Wrapper';
