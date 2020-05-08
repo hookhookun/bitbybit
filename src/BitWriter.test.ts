@@ -9,9 +9,7 @@ ava('Write a value', (t) => {
     writer.write(0b111, 10);
     const actual = writer.end();
     t.is(actual, buffer);
-    t.is(toString(buffer, 0), [
-        '0000000111000000',
-    ].join('\n'));
+    t.is(toString(buffer, 0), '0000000111000000');
 });
 
 ava('Write values', (t) => {

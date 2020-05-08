@@ -18,20 +18,28 @@ export class Wrapper {
         return this.view.buffer;
     }
 
-    protected get byteLength(): number {
+    public get byteLength(): number {
         return this.view.byteLength;
     }
 
-    protected get byte(): number {
+    public get bitLength(): number {
+        return this.byteLength * WordSize;
+    }
+
+    public get byte(): number {
         return this.view.getUint8(this.byteOffset);
     }
 
-    protected get bitOffsetFromStart(): number {
+    public get bitOffsetFromStart(): number {
         return this.byteOffset * WordSize + this.bitOffset;
     }
 
     public get done(): boolean {
         return this.byteLength <= this.byteOffset;
+    }
+
+    public residualBitLength(): number {
+        return this.bitLength - this.bitOffsetFromStart;
     }
 
     /**
@@ -40,8 +48,12 @@ export class Wrapper {
      */
     protected step(bitLength: number): boolean {
         const bitOffset = this.bitOffset + bitLength;
-        this.byteOffset += Math.floor(bitOffset / WordSize);
         this.bitOffset = bitOffset % WordSize;
+        this.byteOffset += Math.floor(bitOffset / WordSize);
+        const {byteLength, byteOffset} = this;
+        if ((byteLength === byteOffset && 0 < this.bitOffset) || byteLength < byteOffset) {
+            throw new RangeError('Cannot step out of buffer');
+        }
         return WordSize <= bitOffset;
     }
 
