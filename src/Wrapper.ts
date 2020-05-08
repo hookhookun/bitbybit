@@ -26,20 +26,20 @@ export class Wrapper {
         return this.byteLength * WordSize;
     }
 
-    public get byte(): number {
-        return this.view.getUint8(this.byteOffset);
-    }
-
     public get bitOffsetFromStart(): number {
         return this.byteOffset * WordSize + this.bitOffset;
     }
 
-    public get done(): boolean {
-        return this.byteLength <= this.byteOffset;
+    public get residualBitLength(): number {
+        return this.bitLength - this.bitOffsetFromStart;
     }
 
-    public residualBitLength(): number {
-        return this.bitLength - this.bitOffsetFromStart;
+    public get byte(): number {
+        return this.view.getUint8(this.byteOffset);
+    }
+
+    public get done(): boolean {
+        return this.byteLength <= this.byteOffset;
     }
 
     /**
