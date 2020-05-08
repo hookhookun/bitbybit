@@ -30,7 +30,7 @@ export class Wrapper {
         return this.byteOffset * WordSize + this.bitOffset;
     }
 
-    protected get done(): boolean {
+    public get done(): boolean {
         return this.byteLength <= this.byteOffset;
     }
 
