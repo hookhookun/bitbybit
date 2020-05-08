@@ -1,49 +1,47 @@
-[@hookun/bitbybit](../README.md) › [BitWriter](bitwriter.md)
+[@hookun/bitbybit](../README.md) › [BitReader](bitreader.md)
 
-# Class: BitWriter
+# Class: BitReader
 
 ## Hierarchy
 
 * [Wrapper](wrapper.md)
 
-  ↳ **BitWriter**
+  ↳ **BitReader**
 
 ## Index
 
 ### Constructors
 
-* [constructor](bitwriter.md#constructor)
+* [constructor](bitreader.md#constructor)
 
 ### Properties
 
-* [bitOffset](bitwriter.md#protected-bitoffset)
-* [byteOffset](bitwriter.md#protected-byteoffset)
-* [tempByte](bitwriter.md#private-tempbyte)
-* [view](bitwriter.md#readonly-view)
+* [bitOffset](bitreader.md#protected-bitoffset)
+* [byteOffset](bitreader.md#protected-byteoffset)
+* [view](bitreader.md#readonly-view)
 
 ### Accessors
 
-* [bitOffsetFromStart](bitwriter.md#protected-bitoffsetfromstart)
-* [buffer](bitwriter.md#buffer)
-* [byte](bitwriter.md#protected-byte)
-* [byteLength](bitwriter.md#protected-bytelength)
-* [done](bitwriter.md#protected-done)
+* [bitOffsetFromStart](bitreader.md#protected-bitoffsetfromstart)
+* [buffer](bitreader.md#buffer)
+* [byte](bitreader.md#protected-byte)
+* [byteLength](bitreader.md#protected-bytelength)
+* [done](bitreader.md#protected-done)
 
 ### Methods
 
-* [end](bitwriter.md#end)
-* [step](bitwriter.md#protected-step)
-* [write](bitwriter.md#write)
+* [read](bitreader.md#read)
+* [step](bitreader.md#protected-step)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new BitWriter**(`buffer`: ArrayBuffer): *[BitWriter](bitwriter.md)*
+\+ **new BitReader**(`buffer`: ArrayBuffer): *[BitReader](bitreader.md)*
 
-*Overrides [Wrapper](wrapper.md).[constructor](wrapper.md#constructor)*
+*Inherited from [Wrapper](wrapper.md).[constructor](wrapper.md#constructor)*
 
-*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitWriter.ts#L7)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/54e56bb/src/Wrapper.ts#L9)*
 
 **Parameters:**
 
@@ -51,7 +49,7 @@ Name | Type |
 ------ | ------ |
 `buffer` | ArrayBuffer |
 
-**Returns:** *[BitWriter](bitwriter.md)*
+**Returns:** *[BitReader](bitreader.md)*
 
 ## Properties
 
@@ -72,14 +70,6 @@ ___
 *Inherited from [Wrapper](wrapper.md).[byteOffset](wrapper.md#protected-byteoffset)*
 
 *Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/54e56bb/src/Wrapper.ts#L7)*
-
-___
-
-### `Private` tempByte
-
-• **tempByte**: *number*
-
-*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitWriter.ts#L7)*
 
 ___
 
@@ -109,9 +99,9 @@ ___
 
 • **get buffer**(): *ArrayBuffer*
 
-*Overrides [Wrapper](wrapper.md).[buffer](wrapper.md#buffer)*
+*Inherited from [Wrapper](wrapper.md).[buffer](wrapper.md#buffer)*
 
-*Defined in [BitWriter.ts:14](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitWriter.ts#L14)*
+*Defined in [Wrapper.ts:17](https://github.com/hookun/bitbybit/blob/54e56bb/src/Wrapper.ts#L17)*
 
 **Returns:** *ArrayBuffer*
 
@@ -153,13 +143,19 @@ ___
 
 ## Methods
 
-###  end
+###  read
 
-▸ **end**(): *ArrayBuffer*
+▸ **read**(`bitLength`: number): *number*
 
-*Defined in [BitWriter.ts:33](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitWriter.ts#L33)*
+*Defined in [BitReader.ts:7](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitReader.ts#L7)*
 
-**Returns:** *ArrayBuffer*
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`bitLength` | number |
+
+**Returns:** *number*
 
 ___
 
@@ -180,20 +176,3 @@ Name | Type | Description |
 **Returns:** *boolean*
 
 Whether byteOffset is changed.
-
-___
-
-###  write
-
-▸ **write**(`value`: number, `bitLength`: number): *void*
-
-*Defined in [BitWriter.ts:18](https://github.com/hookun/bitbybit/blob/54e56bb/src/BitWriter.ts#L18)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`value` | number |
-`bitLength` | number |
-
-**Returns:** *void*
