@@ -29,11 +29,11 @@
 * [byte](bitwriter.md#byte)
 * [byteLength](bitwriter.md#bytelength)
 * [done](bitwriter.md#done)
+* [residualBitLength](bitwriter.md#residualbitlength)
 
 ### Methods
 
 * [end](bitwriter.md#end)
-* [residualBitLength](bitwriter.md#residualbitlength)
 * [step](bitwriter.md#protected-step)
 * [write](bitwriter.md#write)
 
@@ -45,7 +45,7 @@
 
 *Overrides [Wrapper](wrapper.md).[constructor](wrapper.md#constructor)*
 
-*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/20789a9/src/BitWriter.ts#L7)*
+*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/BitWriter.ts#L7)*
 
 **Parameters:**
 
@@ -63,7 +63,7 @@ Name | Type |
 
 *Inherited from [Wrapper](wrapper.md).[bitOffset](wrapper.md#protected-bitoffset)*
 
-*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L9)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L9)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byteOffset](wrapper.md#protected-byteoffset)*
 
-*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L7)*
+*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L7)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **tempByte**: *number*
 
-*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/20789a9/src/BitWriter.ts#L7)*
+*Defined in [BitWriter.ts:7](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/BitWriter.ts#L7)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[view](wrapper.md#readonly-view)*
 
-*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L5)*
+*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L5)*
 
 ## Accessors
 
@@ -101,7 +101,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[bitLength](wrapper.md#bitlength)*
 
-*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L25)*
+*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L25)*
 
 **Returns:** *number*
 
@@ -113,7 +113,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[bitOffsetFromStart](wrapper.md#bitoffsetfromstart)*
 
-*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L33)*
+*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L29)*
 
 **Returns:** *number*
 
@@ -125,7 +125,7 @@ ___
 
 *Overrides [Wrapper](wrapper.md).[buffer](wrapper.md#buffer)*
 
-*Defined in [BitWriter.ts:14](https://github.com/hookun/bitbybit/blob/20789a9/src/BitWriter.ts#L14)*
+*Defined in [BitWriter.ts:14](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/BitWriter.ts#L14)*
 
 **Returns:** *ArrayBuffer*
 
@@ -137,7 +137,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byte](wrapper.md#byte)*
 
-*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L29)*
+*Defined in [Wrapper.ts:37](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L37)*
 
 **Returns:** *number*
 
@@ -149,7 +149,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byteLength](wrapper.md#bytelength)*
 
-*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L21)*
+*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L21)*
 
 **Returns:** *number*
 
@@ -161,9 +161,21 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[done](wrapper.md#done)*
 
-*Defined in [Wrapper.ts:37](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L37)*
+*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L41)*
 
 **Returns:** *boolean*
+
+___
+
+###  residualBitLength
+
+• **get residualBitLength**(): *number*
+
+*Inherited from [Wrapper](wrapper.md).[residualBitLength](wrapper.md#residualbitlength)*
+
+*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L33)*
+
+**Returns:** *number*
 
 ## Methods
 
@@ -171,21 +183,9 @@ ___
 
 ▸ **end**(): *ArrayBuffer*
 
-*Defined in [BitWriter.ts:33](https://github.com/hookun/bitbybit/blob/20789a9/src/BitWriter.ts#L33)*
+*Defined in [BitWriter.ts:33](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/BitWriter.ts#L33)*
 
 **Returns:** *ArrayBuffer*
-
-___
-
-###  residualBitLength
-
-▸ **residualBitLength**(): *number*
-
-*Inherited from [Wrapper](wrapper.md).[residualBitLength](wrapper.md#residualbitlength)*
-
-*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L41)*
-
-**Returns:** *number*
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[step](wrapper.md#protected-step)*
 
-*Defined in [Wrapper.ts:49](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L49)*
+*Defined in [Wrapper.ts:49](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/Wrapper.ts#L49)*
 
 **Parameters:**
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **write**(`value`: number, `bitLength`: number): *void*
 
-*Defined in [BitWriter.ts:18](https://github.com/hookun/bitbybit/blob/20789a9/src/BitWriter.ts#L18)*
+*Defined in [BitWriter.ts:18](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/BitWriter.ts#L18)*
 
 **Parameters:**
 

@@ -35,7 +35,7 @@
 
 • **WordSize**: *8* = 8
 
-*Defined in [constants.ts:1](https://github.com/hookun/bitbybit/blob/20789a9/src/constants.ts#L1)*
+*Defined in [constants.ts:1](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/constants.ts#L1)*
 
 ## Functions
 
@@ -43,7 +43,7 @@
 
 ▸ **createBufferFromBitLength**(`bitLength`: number): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/20789a9/src/createBuffer.ts#L6)*
+*Defined in [createBuffer.ts:6](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/createBuffer.ts#L6)*
 
 If bitLength is 6, then this returns ArrayBuffer of 1 byte.
 If bitLength is 9, then this returns ArrayBuffer of 2 bytes.
@@ -62,7 +62,7 @@ ___
 
 ▸ **createBufferFromBytes**(`byteLength`: Iterable‹number›): *ArrayBuffer*
 
-*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/20789a9/src/createBuffer.ts#L8)*
+*Defined in [createBuffer.ts:8](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/createBuffer.ts#L8)*
 
 **Parameters:**
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **createBufferFromString**(...`bits`: Array‹string›): *ArrayBuffer*
 
-*Defined in [createBufferFromString.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/createBufferFromString.ts#L3)*
+*Defined in [createBufferFromString.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/createBufferFromString.ts#L3)*
 
 **Parameters:**
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **getBit**(`buffer`: ArrayBuffer, `bitOffset`: number): *boolean*
 
-*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/getBit.ts#L3)*
+*Defined in [getBit.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/getBit.ts#L3)*
 
 **Parameters:**
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **getBitInByte**(`byte`: number, `bitIndex`: number): *boolean*
 
-*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/20789a9/src/getBitInByte.ts#L1)*
+*Defined in [getBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/getBitInByte.ts#L1)*
 
 **Parameters:**
 
@@ -128,7 +128,7 @@ ___
 
 ▸ **getValueInBits**(`byte`: number, `WordSize`: number, `start`: number, `end`: number): *number*
 
-*Defined in [getValueInBits.ts:1](https://github.com/hookun/bitbybit/blob/20789a9/src/getValueInBits.ts#L1)*
+*Defined in [getValueInBits.ts:1](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/getValueInBits.ts#L1)*
 
 **Parameters:**
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **listBit**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number): *Generator‹boolean›*
 
-*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/listBit.ts#L3)*
+*Defined in [listBit.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/listBit.ts#L3)*
 
 **Parameters:**
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **listBitHasState**(`buffer`: ArrayBuffer, `state`: boolean, `startBit`: number, `endBit`: number): *Generator‹number›*
 
-*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/listBitHasState.ts#L3)*
+*Defined in [listBitHasState.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/listBitHasState.ts#L3)*
 
 **Parameters:**
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **runLength**(`buffer`: ArrayBuffer, `startBit`: number, `endBit`: number, `startState`: boolean): *Generator‹number›*
 
-*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/runLength.ts#L3)*
+*Defined in [runLength.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/runLength.ts#L3)*
 
 **Parameters:**
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **setBit**(`buffer`: ArrayBuffer, `bitOffset`: number, `bitState`: boolean): *void*
 
-*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/20789a9/src/setBit.ts#L3)*
+*Defined in [setBit.ts:3](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/setBit.ts#L3)*
 
 **Parameters:**
 
@@ -221,7 +221,7 @@ ___
 
 ▸ **setBitInByte**(`byte`: number, `bitIndex`: number, `bitState`: boolean): *number*
 
-*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/20789a9/src/setBitInByte.ts#L1)*
+*Defined in [setBitInByte.ts:1](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/setBitInByte.ts#L1)*
 
 **Parameters:**
 
@@ -239,7 +239,7 @@ ___
 
 ▸ **toString**(`buffer`: ArrayBuffer, `bitsPerLine`: number, `maxLineCount`: number, `delimiter`: string): *string*
 
-*Defined in [toString.ts:1](https://github.com/hookun/bitbybit/blob/20789a9/src/toString.ts#L1)*
+*Defined in [toString.ts:1](https://github.com/hookun/bitbybit/blob/e2d8a7b/src/toString.ts#L1)*
 
 **Parameters:**
 
