@@ -24,14 +24,16 @@
 
 ### Accessors
 
-* [bitOffsetFromStart](wrapper.md#protected-bitoffsetfromstart)
+* [bitLength](wrapper.md#bitlength)
+* [bitOffsetFromStart](wrapper.md#bitoffsetfromstart)
 * [buffer](wrapper.md#buffer)
-* [byte](wrapper.md#protected-byte)
-* [byteLength](wrapper.md#protected-bytelength)
+* [byte](wrapper.md#byte)
+* [byteLength](wrapper.md#bytelength)
 * [done](wrapper.md#done)
 
 ### Methods
 
+* [residualBitLength](wrapper.md#residualbitlength)
 * [step](wrapper.md#protected-step)
 
 ## Constructors
@@ -40,7 +42,7 @@
 
 \+ **new Wrapper**(`buffer`: ArrayBuffer): *[Wrapper](wrapper.md)*
 
-*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L9)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L9)*
 
 **Parameters:**
 
@@ -56,7 +58,7 @@ Name | Type |
 
 • **bitOffset**: *number*
 
-*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L9)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L9)*
 
 ___
 
@@ -64,7 +66,7 @@ ___
 
 • **byteOffset**: *number*
 
-*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L7)*
+*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L7)*
 
 ___
 
@@ -72,15 +74,25 @@ ___
 
 • **view**: *DataView*
 
-*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L5)*
+*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L5)*
 
 ## Accessors
 
-### `Protected` bitOffsetFromStart
+###  bitLength
+
+• **get bitLength**(): *number*
+
+*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L25)*
+
+**Returns:** *number*
+
+___
+
+###  bitOffsetFromStart
 
 • **get bitOffsetFromStart**(): *number*
 
-*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L29)*
+*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L33)*
 
 **Returns:** *number*
 
@@ -90,27 +102,27 @@ ___
 
 • **get buffer**(): *ArrayBuffer*
 
-*Defined in [Wrapper.ts:17](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L17)*
+*Defined in [Wrapper.ts:17](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L17)*
 
 **Returns:** *ArrayBuffer*
 
 ___
 
-### `Protected` byte
+###  byte
 
 • **get byte**(): *number*
 
-*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L25)*
+*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L29)*
 
 **Returns:** *number*
 
 ___
 
-### `Protected` byteLength
+###  byteLength
 
 • **get byteLength**(): *number*
 
-*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L21)*
+*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L21)*
 
 **Returns:** *number*
 
@@ -120,17 +132,27 @@ ___
 
 • **get done**(): *boolean*
 
-*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L33)*
+*Defined in [Wrapper.ts:37](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L37)*
 
 **Returns:** *boolean*
 
 ## Methods
 
+###  residualBitLength
+
+▸ **residualBitLength**(): *number*
+
+*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L41)*
+
+**Returns:** *number*
+
+___
+
 ### `Protected` step
 
 ▸ **step**(`bitLength`: number): *boolean*
 
-*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L41)*
+*Defined in [Wrapper.ts:49](https://github.com/hookun/bitbybit/blob/20789a9/src/Wrapper.ts#L49)*
 
 **Parameters:**
 
