@@ -41,7 +41,7 @@
 
 *Inherited from [Wrapper](wrapper.md).[constructor](wrapper.md#constructor)*
 
-*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L9)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L9)*
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ Name | Type |
 
 *Inherited from [Wrapper](wrapper.md).[bitOffset](wrapper.md#protected-bitoffset)*
 
-*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L9)*
+*Defined in [Wrapper.ts:9](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L9)*
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byteOffset](wrapper.md#protected-byteoffset)*
 
-*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L7)*
+*Defined in [Wrapper.ts:7](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L7)*
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[view](wrapper.md#readonly-view)*
 
-*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L5)*
+*Defined in [Wrapper.ts:5](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L5)*
 
 ## Accessors
 
@@ -89,7 +89,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[bitOffsetFromStart](wrapper.md#protected-bitoffsetfromstart)*
 
-*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L29)*
+*Defined in [Wrapper.ts:29](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L29)*
 
 **Returns:** *number*
 
@@ -101,7 +101,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[buffer](wrapper.md#buffer)*
 
-*Defined in [Wrapper.ts:17](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L17)*
+*Defined in [Wrapper.ts:17](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L17)*
 
 **Returns:** *ArrayBuffer*
 
@@ -113,7 +113,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byte](wrapper.md#protected-byte)*
 
-*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L25)*
+*Defined in [Wrapper.ts:25](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L25)*
 
 **Returns:** *number*
 
@@ -125,7 +125,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[byteLength](wrapper.md#protected-bytelength)*
 
-*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L21)*
+*Defined in [Wrapper.ts:21](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L21)*
 
 **Returns:** *number*
 
@@ -137,7 +137,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[done](wrapper.md#done)*
 
-*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L33)*
+*Defined in [Wrapper.ts:33](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L33)*
 
 **Returns:** *boolean*
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **read**(`bitLength`: number): *number*
 
-*Defined in [BitReader.ts:7](https://github.com/hookun/bitbybit/blob/a4e3653/src/BitReader.ts#L7)*
+*Defined in [BitReader.ts:7](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/BitReader.ts#L7)*
 
 **Parameters:**
 
@@ -165,7 +165,7 @@ ___
 
 *Inherited from [Wrapper](wrapper.md).[step](wrapper.md#protected-step)*
 
-*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/a4e3653/src/Wrapper.ts#L41)*
+*Defined in [Wrapper.ts:41](https://github.com/hookun/bitbybit/blob/ea4c3a0/src/Wrapper.ts#L41)*
 
 **Parameters:**
 
