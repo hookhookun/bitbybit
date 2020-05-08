@@ -1,20 +1,14 @@
-const WordSize = 8;
+import {WordSize} from './constants';
+import {Wrapper} from './Wrapper';
+import {getValueInBits} from './getValueInBits';
 
-export class BitWriter {
+export class BitWriter extends Wrapper {
 
-    public readonly view: DataView;
-
-    private byteOffset: number;
-
-    private bitOffset: number;
-
-    private byte: number;
+    private tempByte: number;
 
     public constructor(buffer: ArrayBuffer) {
-        this.view = new DataView(buffer);
-        this.byteOffset = 0;
-        this.bitOffset = 0;
-        this.byte = 0;
+        super(buffer);
+        this.tempByte = 0;
     }
 
     public get buffer(): ArrayBuffer {
@@ -23,26 +17,22 @@ export class BitWriter {
 
     public write(value: number, bitLength: number): void {
         const {view} = this;
-        let {byte, bitOffset, byteOffset} = this;
-        while (0 < bitLength) {
-            const size = Math.min(WordSize - bitOffset, bitLength);
-            bitOffset += size;
-            byte += Math.floor(value / (2 ** (bitLength - size))) * (2 ** (WordSize - bitOffset));
-            if (bitOffset === WordSize) {
-                view.setUint8(byteOffset, byte);
-                byte = bitOffset = 0;
-                byteOffset++;
+        let consumed = 0;
+        while (consumed < bitLength) {
+            const {bitOffset, byteOffset} = this;
+            const size = Math.min(WordSize - bitOffset, bitLength - consumed);
+            this.tempByte += getValueInBits(value, bitLength, consumed, consumed + size) * (2 ** (WordSize - (bitOffset + size)));
+            consumed += size;
+            if (this.step(size)) {
+                view.setUint8(byteOffset, this.tempByte);
+                this.tempByte = 0;
             }
-            bitLength -= size;
         }
-        this.byte = byte;
-        this.bitOffset = bitOffset;
-        this.byteOffset = byteOffset;
     }
 
     public end(): ArrayBuffer {
-        if (0 < this.bitOffset) {
-            this.view.setUint8(this.byteOffset, this.byte);
+        if (!this.done && 0 < this.bitOffset) {
+            this.view.setUint8(this.byteOffset, this.tempByte);
         }
         return this.buffer;
     }
